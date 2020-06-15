@@ -22,6 +22,7 @@ function remainderOf(n, d) {
     If you're not sure, step out of the code and use pen + paper. Start
     with simple examples and pay attention to the process you carry out.
   */
+  return n % d;
 }
 
 if (require.main === module) {
@@ -29,6 +30,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  console.log(remainderOf(129,17) === 10);
+  console.log(remainderOf(10,4) === 2);
+  console.log(remainderOf(10,1) === 0);
 }
 
 module.exports = remainderOf;
