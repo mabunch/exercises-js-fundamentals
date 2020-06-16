@@ -12,11 +12,16 @@
 
 function capitalize(num) {
   // This is your job. :)
+
+  return num.charAt(0).toUpperCase() + num.slice(1,num.length);
+
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for capitalize:');
 
+  console.log(capitalize('hello') === 'Hello');
+  console.log(capitalize('welcome to the party') === 'Welcome to the party');
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
 }

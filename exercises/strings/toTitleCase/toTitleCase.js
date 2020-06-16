@@ -18,6 +18,19 @@
 
 function toTitleCase(string) {
   // This is your job. :)
+  var i = 0;
+  var new_string = '';
+
+  new_string += string.charAt(i).toUpperCase();
+  for (i=1; i<string.length; i++){
+    if (string.charAt(i-1) == ' '){
+      new_string += string.charAt(i).toUpperCase();
+    }
+    else{
+      new_string += string.charAt(i).toLowerCase();
+    }
+  }
+  return new_string;
 }
 
 if (require.main === module) {
@@ -25,6 +38,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  console.log(toTitleCase('wElCoMe to THE wILD wiLD WEST!')); // => 'Welcome To The Wild Wild West!')
+  console.log(toTitleCase('.'));
+  console.log(toTitleCase('DAVIDSON colLege'));
 }
 
 module.exports = toTitleCase;
