@@ -15,6 +15,17 @@
 
 function toSnakeCase(string) {
   // This is your job. :)
+  var i;
+  var new_string = '';
+  for (i=0; i<string.length; i++){
+    if (string.charAt(i) == ' '){
+      new_string += "_";
+    }
+    else{
+      new_string += string.charAt(i).toLowerCase();
+    }
+  } 
+  return new_string;
 }
 
 if (require.main === module) {
@@ -22,6 +33,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(toSnakeCase('HeLlo fRIENds')); // => 'hello_friends')
+  console.log(toSnakeCase('weLcome to New yorK'));
 }
 
 module.exports = toSnakeCase;

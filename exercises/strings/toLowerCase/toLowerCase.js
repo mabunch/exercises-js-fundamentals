@@ -17,6 +17,13 @@
 
 function toLowerCase(string) {
   // This is your job. :)
+  var i;
+  let new_string = '';
+  for (i=0; i<string.length; i++){
+    new_string += string.charAt(i).toLowerCase();
+  }
+  return new_string;
+
 }
 
 if (require.main === module) {
@@ -24,6 +31,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(toLowerCase('HelLo fRiends!')); // => 'hello friends!')
+  console.log(toLowerCase('AWESOME!'));
+
 }
 
 module.exports = toLowerCase;
