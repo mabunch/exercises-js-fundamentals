@@ -14,7 +14,7 @@ function largest(array) {
       largestSoFar = element;
     }
   }
-
+  
   return largestSoFar;
 }
 

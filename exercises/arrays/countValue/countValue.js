@@ -16,13 +16,22 @@
  */
 function countValue(array, value) {
   // This is your job. :)
+  let count = 0;
+  for (let element in array){
+    if (array[element] === value){
+      count++;
+    }
+  }
+  return count;
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for countValue:');
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(countValue([1, 2, 3, 4, 5], 2) == 1); // => 1
+  console.log(countValue([1, 2, 3, 4, 5], 17) == 0); // => 0
+  console.log(countValue(['hello', 'bananas', 'hello'], 'hello') == 2); // => 2
+  console.log(countValue(['hello', 'bananas', 'hello'], 'giraffe') == 0); // => 0
 }
 
 module.exports = countValue;

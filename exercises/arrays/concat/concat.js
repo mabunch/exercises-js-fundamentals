@@ -23,6 +23,9 @@
  */
 function concat(leftArray, rightArray) {
   // This is your job. :)
+
+  return leftArray.concat(rightArray);
+  
 }
 
 if (require.main === module) {
@@ -30,6 +33,8 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+  console.log(concat([1, 2, 3], [4, 5, 6])); // => [1, 2, 3, 4, 5, 6])
+  console.log(concat([-10, undefined], [true, 'waffles']));
 }
 
 module.exports = concat;

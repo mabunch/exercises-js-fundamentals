@@ -17,13 +17,21 @@
  */
 function countLessThan(array, threshold) {
   // This is your job. :)
+  let count = 0;
+  for (let element in array){
+    if (array[element] < threshold){
+      count++;
+    }
+  }
+  return count;
 }
 
 if (require.main === module) {
-  console.log('Running sanity checks for countLessThan:');
-
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log('Running sanity checks for countGreaterThan:');
+  console.log(countLessThan([1, 2, 3, 4, 5], 2) == 1); 
+  console.log(countLessThan([1, 2, 3, 4, 5], 17) == 5); 
+  console.log(countLessThan([1, 2, 1, 2, 3, 4, 1, 2, 1], 1) == 0); 
+  console.log(countLessThan([10, 10, 10, -10, 7], 10) == 2); 
 }
 
 module.exports = countLessThan;
