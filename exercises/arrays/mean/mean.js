@@ -20,6 +20,12 @@
  */
 function mean(array) {
   // This is your job. :)
+
+  let sum = 0;
+  for (let element in array){
+    sum += array[element];
+  }
+  return (sum / array.length);
 }
 
 if (require.main === module) {
@@ -27,6 +33,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(mean([-10, 10]) == 0);
+  console.log(mean([30,10,20]) == 20);
+  console.log(mean([5,10,15,20]) == 12.5);
 }
 
 module.exports = mean;

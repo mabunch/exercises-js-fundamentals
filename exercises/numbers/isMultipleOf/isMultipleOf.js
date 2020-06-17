@@ -13,18 +13,7 @@
  * @returns {boolean} True if n is a multiple of d and false otherwise
  */
 function isMultipleOf(n, d) {
-
-  if (n === 0){
-    return false;
-  }
-
-  if (n % d === 0){
-    return true;
-  }
-  else{
-
-    return false;
-  }
+  return n % d === 0;
 }
 
 if (require.main === module) {

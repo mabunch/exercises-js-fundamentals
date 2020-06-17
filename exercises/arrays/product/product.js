@@ -10,6 +10,13 @@
  */
 function product(array) {
   // This is your job. :)
+  let product = array[0];
+  for (let element in array){
+    if (element != 0){
+      product *= array[element];
+    }
+  }
+  return product;
 }
 
 if (require.main === module) {
@@ -17,6 +24,9 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+
+  console.log(product([2, 4, 6]) == 48);
+  console.log(product([-10, 10]) == -100);
 }
 
 module.exports = product;

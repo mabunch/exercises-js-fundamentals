@@ -15,13 +15,22 @@
  */
 function anyPositive(array) {
   // This is your job. :)
+  for (let element in array){
+    if (array[element] > 0){
+      return true;
+    }
+  }
+  return false;
+
 }
 
 if (require.main === module) {
   console.log('Running sanity checks for anyPositive:');
 
-  // Add your own sanity checks here.
-  // How else will you be sure your code does what you think it does?
+  console.log(anyPositive([1, 2, 3, 4, 5]) == true); 
+  console.log(anyPositive([1, 2, -3, 4, 5]) == true); 
+  console.log(anyPositive([0, 0, 1]) == true); 
+  console.log(anyPositive([-10, -10, -10]) == false);
 }
 
 module.exports = anyPositive;

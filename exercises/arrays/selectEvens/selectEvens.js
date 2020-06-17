@@ -15,6 +15,13 @@
  */
 function selectEvens(array) {
   // This is your job. :)
+  evens = [];
+  for (let element in array){
+    if (array[element] % 2 === 0){
+      evens += array[element];
+    }
+  }
+  return evens;
 }
 
 if (require.main === module) {
@@ -22,6 +29,10 @@ if (require.main === module) {
 
   // Add your own sanity checks here.
   // How else will you be sure your code does what you think it does?
+console.log(selectEvens([1, 2, 3, 4, 5]) == [2,4]); // => [2, 4]
+console.log(selectEvens([10, 2, 19, 10]) == [10,2,10]); // => [10, 2, 10]
+console.log(selectEvens([1, 1, 1, 2]) == [2]); // => [2]
+console.log(selectEvens([11, 21, 31]) == []); // => []
 }
 
 module.exports = selectEvens;
