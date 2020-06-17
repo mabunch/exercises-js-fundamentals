@@ -24,7 +24,14 @@
 function concat(leftArray, rightArray) {
   // This is your job. :)
 
-  return leftArray.concat(rightArray);
+  let newArray = [];
+  for (let i=0; i<leftArray.length; i++){
+    newArray.push(leftArray[i]);
+  }
+  for (let i=0; i<rightArray.length; i++){
+    newArray.push(rightArray[i]);
+  }
+  return newArray;
   
 }
 

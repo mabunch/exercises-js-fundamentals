@@ -10,6 +10,11 @@
  */
 function product(array) {
   // This is your job. :)
+
+  if (array.length === 0){
+    return 0;
+  }
+
   let product = array[0];
   for (let element in array){
     if (element != 0){
@@ -27,6 +32,7 @@ if (require.main === module) {
 
   console.log(product([2, 4, 6]) == 48);
   console.log(product([-10, 10]) == -100);
+  console.log(product([]) == 0);
 }
 
 module.exports = product;

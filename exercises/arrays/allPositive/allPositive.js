@@ -13,8 +13,8 @@
  */
 function allPositive(array) {
   // This is your job. :)
-  for (let element in array){
-    if (array[element] <= 0){
+  for (let element of array){
+    if (element <= 0){
       return false;
     }
   }

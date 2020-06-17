@@ -17,13 +17,11 @@
  */
 function lastIndexOf(haystack, needle) {
   // This is your job. :)
-  let index = -1;
-  for (let element in haystack){
-    if (haystack[element] === needle && element > index){
-      index = element;
+  for (let i=haystack.length; i>=0; i--){
+    if (haystack[i] === needle)
+      return i;
     }
-  }
-  return index;
+  return -1;
 }
 
 if (require.main === module) {
