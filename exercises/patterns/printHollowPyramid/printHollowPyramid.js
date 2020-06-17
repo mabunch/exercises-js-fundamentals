@@ -4,6 +4,7 @@
   times, etc.
 */
 let helpers = require('../printHelpers');
+const { printCountTimes } = require('../printHelpers');
 
 /**
  * Given an integer `height`, prints a solid pyramid `height` characters tall
@@ -31,6 +32,24 @@ function printHollowPyramid(height) {
   for (let i = 0; i < height; i++) {
     // This is your job. :)
 
+    let outsideSpaces = height - 1 - i;
+    let insideSpaces = i*2 - 1;
+
+    if (i==0) {
+      printCountTimes(' ',outsideSpaces);
+      printCountTimes('#', i*2 + 1)
+      printCountTimes(' ',outsideSpaces);
+    }
+    else if(i==height-1){
+      printCountTimes('#', i*2 + 1)
+    }
+    else{
+      printCountTimes(' ', outsideSpaces);
+      printCountTimes('#',1);
+      printCountTimes(' ',insideSpaces);
+      printCountTimes('#',1);
+      // printCountTimes(' ',outsideSpaces);
+    }
     helpers.printNewLine();
   }
 }
